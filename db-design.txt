@@ -1,0 +1,24 @@
+DATABASE_DESIGN For job portal
+
+REQUIREMENTS:
+ROLE: 
+Admin- can see all the activities going on , 
+JobSeeker- will search the job related to their field and apply for it, 
+Employeer- Take the application for job that they have posted for designated post
+
+MODELS:
+User:[id,username,pw,fname,lname,ph no.,role]
+jobseekerprofile:[id,user,bio,dob,permanent address(province,district,municipality_name,ward_no,place),temporary address(province,district,municipality_name,ward no., place),linkedin,github,position,experience]
+Employerprofile:[id, user, designation,company_position,phone, website]
+
+company:[Company_name,owner_name,description,website,email,phone,company_size,founded_year,location,isverified,created_at,updated_at]
+job_category:[id,name,description]
+skill:[id, name]
+location:[id,country,district,city]
+job:[id,company,job_category,location, title, description,salary,employment_type,experience,vacancy,deadline,created_at,upadated_at]
+resume:[id,jobseekerprofile,title,resume_file,is_default,uploaded_at]
+education:[id,jobseekerprofile,instituition,degree,field_of_study,start_date,end_date,]
+experience:[id,jobseekerprofile,company_name,position,employment_type,start_date,end_date,working_status,description]
+application:[id,job,jobseekerprofile,resume,cover_letter,applied_at,updated_at]
+saved_job:[id,jobseekerprofile,job,saved_at]
+ 
