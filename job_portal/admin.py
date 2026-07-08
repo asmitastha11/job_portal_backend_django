@@ -1,18 +1,5 @@
 from django.contrib import admin
-from .models import (
-    Application,
-    Company,
-    Education,
-    EmployerProfile,
-    Experience,
-    Job,
-    JobCategory,
-    JobSeekerProfile,
-    Location,
-    Resume,
-    SavedJob,
-    Skill,
-)
+from .models import *
 
 
 @admin.register(JobSeekerProfile)

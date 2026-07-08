@@ -26,11 +26,7 @@ class JobSeekerProfile(models.Model):
 
 
 class EmployerProfile(models.Model):
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE,
-        related_name='employer_profile',
-    )
+    user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,related_name='employer_profile',)
     designation = models.CharField(max_length=100, blank=True)
     company_position = models.CharField(max_length=100, blank=True)
     phone = models.CharField(max_length=15, blank=True)
